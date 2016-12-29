@@ -48,3 +48,6 @@ cat urls.txt | go run ./cmd/countish/main.go -threshold .3
 #+RESULTS:
 : [{value 1.00009900990099}]
 
+** TODO examples showing memory usage comparisons
+
+
