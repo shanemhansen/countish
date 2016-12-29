@@ -1,0 +1,29 @@
+* Approximate frequency counts over data streams: for go
+
+Countish implements two approximate counting algorithms  outlined in "Approximate Frequency Counts over Data Streams".
+
+http://www.vldb.org/conf/2002/S10P03.pdf
+
+
+** Use case
+
+Have you ever needed to do something like calculate the top
+URLs or top ips from an infinite stream? This package provides probabalistic
+frequency counters, with accuracy guarantees and low memory usage.
+
+countish provides an extremely simple interface consisting of an "Observe" method and
+a "ItemsAboveThreshold" method.
+
+
+
+Example:
+
+#+BEGIN_SRC bash
+cat urls.txt | go run ./cmd/countish -threshold .01
+#+END_SRC
+
+3 counting implementations are provided.
+
+1) Naive: exact counts are held in a map
+2) Lossy: corresponding to "lossy counting"
+3) Sticky: corresponding to "sticky sampling"
