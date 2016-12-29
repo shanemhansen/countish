@@ -18,9 +18,12 @@ a "ItemsAboveThreshold" method.
 
 Example:
 
-#+BEGIN_SRC bash
-cat urls.txt | go run ./cmd/countish -threshold .01
+#+BEGIN_SRC bash :exports both
+cat urls.txt | go run ./cmd/countish/main.go -threshold .3
 #+END_SRC
+
+#+RESULTS:
+: 0.428671 /
 
 3 counting implementations are provided.
 
