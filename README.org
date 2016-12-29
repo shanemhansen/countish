@@ -30,7 +30,7 @@ cat urls.txt | go run ./cmd/countish -threshold .01
 
 ** Example:
 
-#+BEGIN_SRC go :imports '("github.com/shanemhansen/countish" "fmt") :exports results
+#+BEGIN_SRC go :imports '("github.com/shanemhansen/countish" "fmt") :exports both
   counter := countish.NewLossyCounter(.01, .01)
   for i:=0;i<100;i++ {
       counter.Observe("value")
